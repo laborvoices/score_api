@@ -2,15 +2,21 @@ require 'rails_helper'
 
 RSpec.describe GroupsController, type: :controller do
   describe 'GET index' do
-    before {
+    before  do
       get :index, :format => :json
-    }
+    end
     it {is_expected.to respond_with 200}
+
+    it 'returns an array of groups' do
+      body = JSON.parse(response.body)
+      expect(body['groups']).to be_a(Array)
+    end
   end
   describe 'GET show' do
     let(:group){FactoryGirl.create :group}
     before {
       get :show, :format => :json, :id => group.id
+      body = JSON.parse(response.body)
     }
     it {is_expected.to respond_with 200}
   end

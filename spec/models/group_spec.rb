@@ -5,5 +5,7 @@ RSpec.describe Group, type: :model do
   it 'has properties' do
     should respond_to :name
     should respond_to :conversations_count
+    should respond_to :users_count
+    should respond_to :total_workers
   end
 end
