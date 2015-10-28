@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  resources :groups, only: [:index, :show], defaults: {format: :json}
+  scope defaults: {format: :json} do
+    resources :groups, only: [:index, :show]
+    resources :categories, only: [:index, :show]
+  end
 end
