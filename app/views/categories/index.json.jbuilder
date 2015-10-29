@@ -1,3 +1,3 @@
 json.categories @categories do |category|
-  json.(category, :id, :name)
+  json.partial! 'show', category: category
 end
