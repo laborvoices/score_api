@@ -2,3 +2,31 @@
   Place all the styles related to the matching controller here.
   They will automatically be included in application.css.
 */
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url("http://drkozhgsg2ln5.cloudfront.net/assets/background/hash_bg-31978ebfec4413440f0268da2f32e539.png");
+  color: #777;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+
+header {
+  position: relative;
+  top: 40px;
+}
+header a.logo {
+  position: relative;
+  top: 8px;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  background:url('http://drkozhgsg2ln5.cloudfront.net/assets/laborvoices_spoke_small-2848123038eb98f8fc447244bd45dd1d.png') no-repeat left top;
+  padding: 35px 100px;
+  zoom:1;
+  z-index: 9999;
+}
