@@ -19,9 +19,9 @@ RSpec.describe GroupsController, type: :controller do
     }
     it {is_expected.to respond_with 200}
 
-    it 'has an array of category scores' do
+    it 'has an array of scores' do
       body = JSON.parse(response.body)
-      expect(body['category_scores']).to be_a(Array)
+      expect(body['scores']).to be_a(Array)
     end
   end
 end
