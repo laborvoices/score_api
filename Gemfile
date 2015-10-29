@@ -11,9 +11,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 
-#include jquery in case needed for splash page
+#include jquery in case needed for home page
 gem 'jquery-rails'
 gem 'turbolinks'
+
+#use slim for home page templating
+gem 'slim-rails'
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring', group: :development
