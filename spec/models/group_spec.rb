@@ -8,4 +8,5 @@ RSpec.describe Group, type: :model do
     should respond_to :users_count
     should respond_to :total_workers
   end
+  it {is_expected.to validate_uniqueness_of :name}
 end

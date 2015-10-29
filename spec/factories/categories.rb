@@ -1,5 +1,6 @@
 FactoryGirl.define do
   factory :category do
-    name ""
+    letters = ('a'..'z').to_a
+    sequence(:name) {|n| "Wages" + letters[n]}
   end
 end
