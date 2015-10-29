@@ -1,24 +1,22 @@
 require 'rails_helper'
 
-RSpec.describe CategoriesController, type: :controller do
+RSpec.describe V1::GroupsController, type: :controller do
   describe 'GET index' do
-    before {
-      get :index, format: :json
+    before  {
+      get :index, :format => :json
     }
     it {is_expected.to respond_with 200}
 
-    it 'returns an array of categories' do
+    it 'returns an array of groups' do
       body = JSON.parse(response.body)
-      expect(body['categories']).to be_a(Array)
+      expect(body['groups']).to be_a(Array)
     end
   end
-
   describe 'GET show' do
-    let(:category){FactoryGirl.create :category}
+    let(:group){FactoryGirl.create :group}
     before {
-      get :show, format: :json, id: category.id
+      get :show, :format => :json, :id => group.id
     }
-
     it {is_expected.to respond_with 200}
 
     it 'has an array of scores' do
@@ -26,5 +24,4 @@ RSpec.describe CategoriesController, type: :controller do
       expect(body['scores']).to be_a(Array)
     end
   end
-
 end
