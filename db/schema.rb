@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20151028201049) do
   end
 
   create_table "scores", force: true do |t|
-    t.integer  "value"
+    t.float  "value"
     t.integer  "category_id"
     t.integer  "group_id"
     t.datetime "created_at"
