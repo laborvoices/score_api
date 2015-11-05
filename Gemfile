@@ -15,6 +15,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 
+#use rack cors for cross domain authentication
+gem 'rack-cors', :require => 'rack/cors'
+
 #use slim for home page templating
 gem 'slim-rails'
 
